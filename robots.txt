@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /assets/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /media/
+Disallow: /pages/
+Disallow: /scripts/
