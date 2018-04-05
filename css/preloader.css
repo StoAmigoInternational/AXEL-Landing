@@ -1,0 +1,184 @@
+/* -------------------------------------------------- */
+/* FOR REFERENCE
+/* -------------------------------------------------- */
+
+/*
+primary: #fa0096;
+secondary: #3200fa;
+accent: #00eeff;
+
+light-grey: #eee;
+dark-grey: #9a9a9a;
+charcoal: #333;
+black: #1d1d1d;
+*/
+
+/* -------------------------------------------------- */
+/* SET-UP
+/* -------------------------------------------------- */
+
+html {
+	background-color: #fff;
+}
+
+html, body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	min-height: 100%; /* Careful with this. Unexpected results in Safari. */
+    font-size: 14px; /* Set a base level font size for entire document. */
+
+	/* -webkit-overflow-scrolling: touch;
+	touch-action: none; */
+}
+
+#container {
+    opacity: 0;
+}
+
+/* -------------------------------------------------- */
+/* PRELOADER
+/* -------------------------------------------------- */
+
+#preloader-parent {
+	z-index: 99;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+
+#preloader-indicator {
+	z-index: 100;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	width: 35px;
+	height: 35px;
+	stroke: #fff;
+	/*fill: #fec35a;*/
+}	
+
+ul#preloader-logo {
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: transparent;
+
+	transform: translate(-50%,-50%);
+}
+
+ul#preloader-logo li {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+ul#preloader-logo li:nth-of-type(1) {
+	color: #fff;
+	text-align: left;
+}
+
+ul#preloader-logo li:nth-of-type(2) svg {
+	width: 100%;
+	max-width: 150px;
+	max-height: 75px;
+}
+
+ul#preloader-logo li:nth-of-type(3) {
+	color: #fff;
+	text-align: right;
+}
+
+/* -------------------------------------------------- */
+/* CUSTOM
+/* -------------------------------------------------- */
+
+
+
+/* -------------------------------------------------- */
+/* ERROR: JS DISABLED
+/* -------------------------------------------------- */
+
+noscript {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+
+	background-color: #333;
+}
+
+noscript div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 0;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	color: #fff;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1em;
+
+	transform: translate(-50%,-50%);
+}
+
+noscript div span {
+	color: #fff;
+	font-weight: bold;
+}
+
+/* -------------------------------------------------- */
+/* ERROR: WINDOW APPLICATION
+/* -------------------------------------------------- */
+
+#error-parent {
+	z-index: -1;
+    cursor: default;
+    pointer-events: auto;
+    overflow: hidden;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+    background-color: #333;
+    
+    user-select: none;
+}
+
+#error-parent p {
+    display: block;
+	position: absolute;
+	top: 50%;
+    left: 50%;	
+    padding: 0 0.75rem 0 0.75rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1.25em;
+    text-align: center;
+    
+	transform: translate(-50%,-50%);
+}
+
+@media screen and (min-width: 0) and (max-width: 319px), screen and (min-height: 0) and (max-height: 374px) {
+	
+	#error-parent {
+		z-index: 9999;
+		display: block;
+	}
+
+}

@@ -1,0 +1,77 @@
+/* -------------------------------------------------- */
+/* ATTRIBUTE ORDER (FOR PERSONAL REFERENCE)
+/* -------------------------------------------------- */	
+
+/*
+.my-element {
+	content: "";
+	zoom: 1;
+	z-index: auto;
+	opacity: 1;
+	cursor: default;
+	pointer-events: auto;	
+	
+	float: none;
+	overflow: hidden;
+	vertical-align: baseline;
+	display: block;
+	visibility: visible;
+	position: relative;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	
+	width: 100%;
+	height: 100vh;
+	max-width: 1920px;
+	max-height: 1080px;
+	
+	color: #000000;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	text-align: left;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: none;
+	white-space: normal;
+	text-shadow: 10px 10px 0 rgba("0,0,0,1");
+	box-shadow: 10px 10px 0 rgba("0,0,0,1");	
+	
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	
+	outline: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	
+	background-color: #ffffff;
+	background-image: url();
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: cover;
+	
+	transform-origin: center center;
+	transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg) skewX(0deg) skewY(0deg) translate3d(0, 0, 0) perspective(1000px);
+	
+	backface-visibility: hidden;
+	
+	filter: blur(1px);
+	
+	transition: all 1s ease-in-out;
+}
+*/
+
+/* -------------------------------------------------- */
+/* SET-UP
+/* -------------------------------------------------- */
+
+

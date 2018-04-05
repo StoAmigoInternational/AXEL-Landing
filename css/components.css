@@ -1,0 +1,1093 @@
+/* -------------------------------------------------- */
+/* FOR REFERENCE
+/* -------------------------------------------------- */
+
+/*
+primary: #fa0096;
+secondary: #3200fa;
+accent: #00eeff;
+
+light-grey: #eee;
+dark-grey: #9a9a9a;
+charcoal: #333;
+black: #1d1d1d;
+*/
+
+/* -------------------------------------------------- */
+/* ANIMATIONS
+/* -------------------------------------------------- */
+
+	/* -------------------------------------------------- */
+	/* PULSE
+	/* -------------------------------------------------- */
+
+	.anim-pulse {
+		overflow: initial;
+		position: relative
+	}
+	.anim-pulse::before {
+		content: '';
+		z-index: -1;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		background-color: inherit;
+
+		transition: opacity 0.3s, -webkit-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+
+		animation: animPulse 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+	}
+
+	@keyframes animPulse {
+
+		0% {
+			opacity: 1;
+			transform: scale(1)
+		}
+
+		50% {
+			opacity: 0;
+			transform: scale(1.5)
+		}
+
+		100% {
+			opacity: 0;
+			transform: scale(1.5)
+		}
+
+	}
+
+/* -------------------------------------------------- */
+/* BUTTON STYLES
+/* -------------------------------------------------- */
+
+.button-inactive {
+	cursor: default;
+	pointer-events: none;
+}
+
+	/* -------------------------------------------------- */
+	/* GLOW
+	/* -------------------------------------------------- */
+
+	.text-fx-glow:hover {
+		animation: animTextColor 3s ease infinite;
+	}
+
+	.button-fx-glow:hover::after {
+		content: '';
+		z-index: 1;
+		position: absolute;
+		top: 1em;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		height: 100%;
+		width: 100%;
+
+		background: linear-gradient(270deg, #0fffc1, #7e0fff);
+		background-size: 200% 200%;
+
+		filter: blur(15px);
+
+		transform: scale(1);
+		animation: animGlow 5s ease-in-out infinite;
+	}
+
+	@keyframes animGlow {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	@keyframes animTextColor {
+		0% {
+			color: #7e0fff;
+		}
+		50% {
+			color: #0fffc1;
+		}
+		100% {
+			color: #7e0fff;
+		}
+	}
+
+/* RESPONSIVE */
+/*
+@media only screen and (min-width: 0) and (max-width: 639px) {
+
+	.button {
+		font-size: 0.5em;
+	}
+
+}
+*/
+
+/* -------------------------------------------------- */
+/* UI HINTS
+/* -------------------------------------------------- */
+
+	/* -------------------------------------------------- */
+	/* SCROLL DOWN
+	/* -------------------------------------------------- */
+
+	/* COMMON */
+	.scroll-hint .mouse,
+	.scroll-hint .mouse .scroll,
+	.scroll-hint p {
+		transition: all 0.25s ease-in-out;
+	} 
+
+	/* PARENT */
+	.scroll-hint {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 2em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* HOVER */
+	.scroll-hint:hover .mouse {
+		border: 2px solid #fff;
+	} 
+
+	.scroll-hint:hover .mouse .scroll {
+		background-color: #fff;
+	}
+
+	.scroll-hint:hover p {
+		color: #fff;
+	}
+
+	/* LABEL */
+	.scroll-hint p {
+		position: relative;
+		bottom: 0;
+		margin: 0.25rem 0 0.25rem 0;
+		padding: 0 0 0 0;
+		color: #fff;
+		font-size: 0.875em;
+		text-align: center;
+	}
+
+	/* MOUSE */
+	.mouse {
+		position: relative;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto 0 auto;
+		width: 22px;
+		height: 35px;
+		border-radius: 15px;
+		border: 2px solid #fff;
+
+		animation: animMouse 1s;
+	}
+
+	.mouse .scroll {
+		display: block;
+		width: 4px;
+		height: 4px;
+		margin: 0.25rem auto 0 auto;
+		border-radius: 4px;
+		background-color: #fff;
+
+		animation: animScroll 1s infinite;
+		animation-direction: normal;
+	}
+
+	.mouse .scroll.reverse {
+		animation-direction: reverse;
+	}
+
+	@keyframes animMouse {
+
+	  0% {
+		opacity: 0;
+		transform: translateY(40px);
+	  }
+	  100% {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+
+	@keyframes animScroll {
+	  0% {
+		opacity: 1;
+	  }
+	  100% {
+		opacity: 0;
+		transform: translateY(20px);
+	  }
+
+	}
+
+	/* -------------------------------------------------- */
+	/* SCROLL PROGRESS
+	/* -------------------------------------------------- */
+
+	.scroll-progress {
+		z-index: auto;
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		height: 4px;
+		
+		transition: width 0.5s ease;
+	}
+
+/* -------------------------------------------------- */
+/* ELEMENTS
+/* -------------------------------------------------- */
+
+	/* -------------------------------------------------- */
+	/* SVG
+	/* -------------------------------------------------- */
+
+	/*
+	.svg-primary-stroke * {
+	stroke: #fa0096;
+	}
+	.svg-primary-fill * {
+		fill: #fa0096;
+	}
+	.svg-primary * {
+		stroke: #fa0096;
+		fill: #fa0096;
+	}
+	*/
+
+	/* COMMON */
+	.svg-icon rect {
+		fill: none;
+	}
+
+	.svg-global-gradient {
+		pointer-events: none;
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	/* PRIMARY */
+	.svg-primary-gradient path {
+	  fill: url(#svg-primary-gradient);
+	}
+
+	#svg-primary-gradient stop.start-color {
+	  stop-color: #fa0096;
+	}
+	#svg-primary-gradient stop.end-color {
+	  stop-color: #3200fa;
+	}
+
+	/* SECONDARY */
+	.svg-secondary-gradient path {
+	  fill: url(#svg-secondary-gradient);
+	}
+
+	#svg-secondary-gradient stop.start-color {
+	  stop-color: #3200fa;
+	}
+	#svg-secondary-gradient stop.end-color {
+	  stop-color: #fa0096;
+	}
+
+	/* BASIC */
+
+	/* -------------------------------------------------- */
+	/* TIP / POINTER
+	/* -------------------------------------------------- */
+
+	/* COMMON */
+	.tip-top,
+	.tip-bottom,
+	.tip-left,
+	.tip-right {
+		position: relative;
+	}
+
+	.tip-top::after,
+	.tip-bottom::after,
+	.tip-left::after,
+	.tip-right::after {
+		content: '';
+		z-index: 1;
+		cursor: default;
+		pointer-events: none;
+		position: absolute;
+		margin-right: auto;
+		width: 35px;
+		height: 35px;
+		border-radius: 4px;
+		background-color: inherit;
+	}
+
+	/* ELEMENTS */
+	.tip-top::after {
+		top: -1em;
+		left: 50%;
+
+		transform: translateX(-50%) rotate(45deg);
+	}
+
+	.tip-bottom::after {
+		bottom: -0.5em;
+		left: 50%;
+
+		transform: translateX(-50%) rotate(45deg);
+	}
+
+	.tip-left::after {
+		left: -1em;
+		top: 50%;
+
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.tip-right::after {
+		right: -1em;
+		top: 50%;
+
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	/* RESPONSIVE */
+	@media only screen and (min-width: 0) and (max-width: 639px) {
+
+		.tip-left::after {
+			top: -1em;
+			left: 50%;
+
+			transform: translateX(-50%) rotate(45deg);
+		}
+
+		.tip-right::after {
+			bottom: -1em;
+			left: 50%;
+
+			transform: translateX(-50%) rotate(45deg);
+		}
+
+	}
+
+/* -------------------------------------------------- */
+/* PARALLAX
+/* -------------------------------------------------- */
+
+.parallax-top-bottom-background,
+.parallax-bottom-top-background,
+.parallax-left-right-background,
+.parallax-right-left-background,
+.parallax-diagonal-background {
+ 	backface-visibility: hidden;
+	/*background-attachment: fixed !important;*/
+}
+
+/* -------------------------------------------------- */
+/* HERO
+/* -------------------------------------------------- */
+
+/* PARENT */
+.hero #hero-intro {
+
+}
+
+/* COPY */
+.hero #hero-intro header {
+    width: 100%;
+	color: #fff;
+	text-align: center;
+}
+
+ #hero-header {
+	font-size: 3em;
+	line-height: 1em;
+}
+
+#hero-subheader {
+	font-size: 1.25em;
+	letter-spacing: 0.04em;
+    line-height: 1.25em;
+}
+
+.hero #sidebar-social {
+
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 0) and (max-width: 414px) {
+
+    #hero-header {
+        font-size: 1.5em;
+    }
+    
+    #hero-subheader {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (min-height: 0) and (max-height: 568px) {
+
+	.margin-tb-height {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+/* -------------------------------------------------- */
+/* ACCORDION
+/* -------------------------------------------------- */
+
+/* PARENT */
+ul.accordion {
+	
+}
+
+/* ITEM */
+ul.accordion > li.accordion-item {
+
+}
+
+ul.accordion > li.accordion-item:first-child > :first-child {
+	border-radius: 8px 8px 0 0;
+}
+
+ul.accordion > li.accordion-item:last-child:not(.is-active) > a.accordion-title {
+	border-radius: 0 0 8px 8px;
+}
+
+/* TITLE */
+ul.accordion > li.accordion-item a.accordion-title {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 2rem;
+	color: #333;
+	border: 1px solid #eee;
+
+	background-color: #fff;
+	
+	/*transition: all 0.25s ease-in-out;*/
+}
+
+ul.accordion > li.accordion-item a.accordion-title::before {
+	content: '\f067';
+	color: #333;
+	font-family: "FontAwesome";
+	font-size: 0.75em;
+}
+
+/* CONTENT */
+ul.accordion > li.accordion-item > .accordion-content {
+	padding: 1rem;
+	background-color: transparent;
+	
+	/*transition: all 0.25s ease-in-out;*/
+}
+
+ul.accordion > li.accordion-item > .accordion-content p {
+	color: #333;
+	line-height: 2em;
+}
+
+/* ACTIVE */
+ul.accordion > li.accordion-item.is-active a.accordion-title {
+	color: #fff;
+	background-color: #333;
+}
+
+ul.accordion > li.accordion-item.is-active a.accordion-title::before {
+	content: '\f068';
+	color: #fff;
+}
+
+/* -------------------------------------------------- */
+/* TILES
+/* -------------------------------------------------- */
+
+/*
+.tile {
+	transition: all 0.25s ease-in-out;
+	
+	background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-position: top left;
+	background-repeat: repeat;
+	background-size: 18%;
+	
+    box-shadow: 0 16px 24px 2px rgba(250,0,150,0),
+            0 6px 30px 5px rgba(250,0,150,0),
+            0 8px 10px -5px rgba(250,0,150,0);
+}
+
+.tile:hover {
+	border-color: rgba(255,255,255,0);
+	background-color: #333;
+	
+	background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.075'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-position: center center;
+	
+    box-shadow: 0 16px 24px 2px rgba(250,0,150,0.06),
+            0 6px 30px 5px rgba(250,0,150,0.04),
+            0 8px 10px -5px rgba(250,0,150,0.08);
+}
+*/
+
+/* PARENT */
+.tile {
+	cursor: pointer;
+	background-color: transparent;
+	
+	transition: all 0.25s ease-in-out;
+	
+    box-shadow: 0 16px 24px 2px rgba(250,0,150,0),
+            0 6px 30px 5px rgba(250,0,150,0),
+            0 8px 10px -5px rgba(250,0,150,0);
+}
+
+/* CHILD */
+.tile div h3 {
+	font-size: 1.125em;
+}
+
+.tile div h4 {
+	font-size: 1em;
+}
+
+.tile div p {
+	font-size: 1em;
+}
+
+.tile div h3,
+.tile div h4,
+.tile div p {
+	color: #fff;
+	text-align: center;
+}
+
+/* HOVER */
+.tile:hover {
+	border-color: #9a9a9a;
+	background-color: #fff;
+	
+
+	
+    box-shadow: 0 16px 24px 2px rgba(250,0,150,0.06),
+            0 6px 30px 5px rgba(250,0,150,0.04),
+            0 8px 10px -5px rgba(250,0,150,0.08);
+}
+
+.tile:hover div h3,
+.tile:hover div p {
+	color: #333;
+}
+
+.tile:hover div h4 {
+	color: #9a9a9a;
+}
+
+/* ACTIVE */
+
+/* -------------------------------------------------- */
+/* SLIDER: NAV
+/* -------------------------------------------------- */
+
+/* PARENT */
+.slider-nav .flickity-viewport {
+	
+}
+
+.slider-nav .flickity-slider {
+
+}
+
+/* ITEM */
+.slider-nav .flickity-viewport .slider-item {
+    margin: 0 1rem 0 1rem;
+}
+
+.slider-nav .flickity-viewport .slider-item a {
+	display: block;
+	position: relative;
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+	width: 100%;
+	color: #333;
+	font-size: 1em;
+	text-align: center;
+	
+	transition: all 0.25s ease-in-out;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* HOVER */
+.slider-nav .flickity-viewport .slider-item a:hover {
+	color: #3200fa;
+}
+
+.slider-nav .flickity-viewport .slider-item a:hover::after {
+    width: 25%;
+	background-color: #3200fa;
+}
+
+/* ACTIVE */
+.slider-nav .flickity-viewport .slider-item.is-nav-selected a {
+	cursor: pointer;
+	pointer-events: none;
+	color: #fa0096;
+}
+
+/* PSUEDO */
+.slider-nav .flickity-viewport .slider-item a::after {
+    content: '';
+    position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+    width: 0;
+    height: 4px;
+    background-color: #fa0096;
+	
+	transition: all 0.25s cubic-bezier(0.680, -0.55, 0.265, 1.55);
+}
+
+.slider-nav .flickity-viewport .slider-item.is-nav-selected a::after {
+    width: 75%;
+}
+
+/* PREVIOUS / NEXT BUTTONS */
+.slider-default .previous,
+.slider-default .next {
+	position: absolute;
+	top: 40%;
+	border-radius: 100px;
+    background-color: #fff;
+    
+	transform: translateY(-40%);
+	
+    transition: all 0.25s ease-in-out;
+}
+
+.slider-default .previous svg,
+.slider-default .next svg {
+	display: none;
+}
+
+.flickity-prev-next-button.previous {
+	left: 2em;
+}
+
+.flickity-prev-next-button.next {
+	right: 2em;
+}
+
+.slider-default .previous::before,
+.slider-default .next::before {
+	display: inline-block;
+	margin-left: auto;
+    margin-right: auto;
+    color: #333;
+    font-family: "FontAwesome";
+}
+
+.slider-default .previous::before {
+    content: "\f053";
+}
+
+.slider-default .next::before {
+    content: "\f054";
+}
+
+.slider-default .previous:hover,
+.slider-default .next:hover {
+    background-color: #333;
+}
+
+.slider-default .previous:hover::before,
+.slider-default .next:hover::before {
+    color: #fff;
+}
+
+/* PAGE DOTS */
+.slider-default ol.flickity-page-dots {
+	position: relative;
+	bottom: 0;
+	padding-bottom: 0;
+}
+
+.slider-default ol.flickity-page-dots > li.dot {
+	cursor: pointer;
+	opacity: 1;
+	display: inline-block;
+	margin: 0 0.25rem;
+	width: 35px;
+	height: 35px;
+	border-radius: 0;
+    border-bottom: 4px solid #333;
+	background-color: transparent;
+	
+	transition: all 0.25s ease-in-out;
+}
+
+.slider-default ol.flickity-page-dots > li.dot:hover {
+	opacity: 1;
+    border-bottom: 4px solid #3200fa;
+}
+
+.slider-default ol.flickity-page-dots > li.dot.is-selected {
+	opacity: 1;
+    border-bottom: 4px solid #fa0096;
+}
+
+
+
+
+
+	/* -------------------------------------------------- */
+	/* SLIDER: THEMES
+	/* -------------------------------------------------- */
+
+	/* DARK */
+	.slider-nav.dark .flickity-viewport .slider-item a {
+		color: #333;
+	}
+
+	.slider-nav.dark .flickity-viewport .slider-item a::after {
+		background-color: #fa0096;
+	}
+
+	.slider-nav.dark .flickity-viewport .slider-item a:hover {
+		color: #3200fa;
+	}
+
+	.slider-nav.dark .flickity-viewport .slider-item a:hover::after {
+		background-color: #3200fa;
+	}
+
+	.slider-nav.dark .flickity-viewport .slider-item.is-nav-selected a {
+		color: #fa0096;
+	}
+
+
+
+
+
+	.slider-default.dark .previous,
+	.slider-default.dark .next {
+		background-color: transparent;
+	}
+
+	.slider-default.dark .previous::before,
+	.slider-default.dark .next::before {
+		color: #333;
+	}
+
+	.slider-default.dark .previous:hover,
+	.slider-default.dark .next:hover {
+		background-color: transparent;
+	}
+
+	.slider-default.dark .previous:hover::before,
+	.slider-default.dark .next:hover::before {
+		color: #333;
+	}
+
+
+
+
+
+	.slider-default.dark ol.flickity-page-dots > li.dot {
+		border-bottom: 4px solid #333;
+		background-color: transparent;
+	}
+
+	.slider-default.dark ol.flickity-page-dots > li.dot:hover {
+		border-bottom: 4px solid #3200fa;
+	}
+
+	.slider-default.dark ol.flickity-page-dots > li.dot.is-selected {
+		border-bottom: 4px solid #fa0096;
+	}
+
+
+
+
+
+	/* LIGHT */
+	.slider-nav.light .flickity-viewport .slider-item a {
+		color: #fff;
+	}
+
+	.slider-nav.light .flickity-viewport .slider-item a::after {
+		background-color: #00eeff;
+	}
+
+	.slider-nav.light .flickity-viewport .slider-item a:hover {
+		color: #00eeff;
+	}
+
+	.slider-nav.light .flickity-viewport .slider-item a:hover::after {
+		background-color: #00eeff;
+	}
+
+	.slider-nav.light .flickity-viewport .slider-item.is-nav-selected a {
+		color: #00eeff;
+	}
+
+
+
+
+
+	.slider-default.light .previous,
+	.slider-default.light .next {
+		background-color: transparent;
+	}
+
+	.slider-default.light .previous::before,
+	.slider-default.light .next::before {
+		color: #fff;
+	}
+
+	.slider-default.light .previous:hover,
+	.slider-default.light .next:hover {
+		background-color: #fa0096;
+	}
+
+	.slider-default.light .previous:hover::before,
+	.slider-default.light .next:hover::before {
+		color: #fff;
+	}
+
+
+
+
+
+	.slider-default.light ol.flickity-page-dots > li.dot {
+		border-bottom: 4px solid #fff;
+		background-color: transparent;
+	}
+
+	.slider-default.light ol.flickity-page-dots > li.dot:hover {
+		opacity: 1;
+		border-bottom: 4px solid #00eeff;
+	}
+
+	.slider-default.light ol.flickity-page-dots > li.dot.is-selected {
+		opacity: 1;
+		border-bottom: 4px solid #00eeff;
+	}
+
+
+
+
+
+/* -------------------------------------------------- */
+/* SLIDER
+/* -------------------------------------------------- */
+
+/* PARENT */
+.slider-default {
+
+}	
+
+.slider-default .flickity-viewport {
+	
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform: translate3d(0,0,0);
+	transform: translateZ(0);
+	
+	transition: height 0.25s ease-in;
+}
+
+.slider-default .flickity-viewport .flickity-slider {
+
+}
+
+/* ITEM */
+.slider-default .flickity-viewport .flickity-slider .slider-item {
+	
+}
+
+/* LAZYLOAD */
+img.flickity-lazyload {
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+}
+
+img.flickity-lazyloaded,
+img.flickity-lazyerror {
+	  opacity: 1;
+}
+
+
+
+
+
+/* HELPERS */
+/* Carousel height, as percentage of width. */
+.slider-default.adapt {
+    padding-bottom: 1rem;
+}
+
+/* Viewport inherit size from carousel. */
+.slider-default.adapt .flickity-viewport {
+    min-height: 100%;
+}
+
+/* Cell inherit height from carousel. */
+.slider-default.adapt .flickity-viewport .flickity-slider .slider-item {
+	width: 100%;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (min-height: 0) and (max-height: 736px) {
+
+
+
+}
+
+@media screen and (min-width: 0) and (max-width: 975px) {
+	
+    .slider-default .previous,
+    .slider-default .next {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 0) and (max-width: 720px) {
+	
+
+
+}
+
+/* -------------------------------------------------- */
+/* FORM
+/* -------------------------------------------------- */
+
+/* COMMON */
+
+
+/* PARENT */
+#mc_embed_signup {
+	clear: left;
+	display: block;
+	margin: 2rem auto 0 auto;
+	width: 100%;
+	max-width: 700px;
+	background: none;
+}
+
+/* FIELD */
+#mce-EMAIL {
+	max-width: 400px;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'], [type='week'],
+[type='email'], [type='number'],
+[type='search'], [type='tel'],
+[type='time'], [type='url'],
+[type='color'], textarea {
+	
+	/*margin: 0 0 1rem;*/
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	width: 100%;
+	height: 50px;
+	color: #333;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.5;
+
+	border: 1px solid #fa0096;
+	border-radius: 100px;
+	background-color: #fefefe;
+
+	
+	transition: all 0.25s ease-in-out;
+	
+}
+
+/* FIELD FOCUS */
+[type='text']:focus,
+[type='password']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='color']:focus, textarea:focus {
+	
+	outline: none;
+	border: 1px solid #fa0096;
+	background-color: #fefefe;
+
+	
+
+	
+}
+
+/* BUTTON: SUBSCRIBE */
+i.button {
+	transition: all 0.25s ease-in-out;
+}
+
+i.button:hover {
+	background-color: #fa0096 !important;
+}
+
+#mc-embedded-subscribe {
+	background-color: inherit;
+}
+
+#mc-embedded-subscribe:hover {
+	background-color: inherit;
+}
+
+/* IE */
+#mc-embedded-subscribe.ie {
+	background-color: #333;
+}
+
+#mc-embedded-subscribe.ie:hover {
+	background-color: #fa0096;
+}

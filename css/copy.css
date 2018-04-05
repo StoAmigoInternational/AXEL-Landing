@@ -1,0 +1,314 @@
+/* -------------------------------------------------- */
+/* FOR REFERENCE
+/* -------------------------------------------------- */
+
+/*
+primary: #fa0096;
+secondary: #3200fa;
+accent: #daffd4;
+
+light-grey: #eee;
+dark-grey: #9a9a9a;
+charcoal: #333;
+black: #1d1d1d;
+*/
+
+/* -------------------------------------------------- */
+/* GENERAL
+/* -------------------------------------------------- */
+
+/*@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,700");*/
+
+/*
+.font-stack {  
+	font-family: -apple-system, 
+				BlinkMacSystemFont, 
+				"Segoe UI", 
+				Roboto, 
+				Oxygen-Sans, 
+				Ubuntu, 
+				Cantarell, 
+				"Helvetica Neue", 
+				sans-serif;
+}
+*/
+
+h1, h2, h3, h4, h5, h6,
+.font-header {
+	font-family: "Comfortaa", cursive;
+    font-weight: bold;
+}
+
+.font-subheader {
+	font-family: "Open San", sans-serif;
+    font-weight: 400;
+}
+
+.font-heavy {
+	font-family: "Comfortaa", cursive;
+	font-weight: 700;
+}
+
+p, a, div, dl, li, ol,
+.font-paragraph {
+	/*font-family: "Open San", sans-serif;*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.font-blockquote {
+	/*font-family: "Open San", sans-serif;*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+cite,
+.font-cite {
+	/*font-family: "Open San", sans-serif;*/
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-style: italic;
+}
+
+.font-system {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+a, blockquote, button, div, figcaption, h1, h2, h3, h4, h5, h6, input, label, dl, li, ol, p, select, span, table, textarea {
+	/*
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	text-align: inherit;
+	border: 0;
+	*/
+	
+	voice-family: female;
+	volume: medium;
+	azimuth: 0;
+	elevation: level;
+	pitch: medium;
+	richness: 50;
+	stress: 25;
+	speak: normal;
+	speak-header: once;
+	speak-numeral: continuous;
+	speak-punctuation: none;
+	speech-rate: medium;
+}
+
+a, button, input, label, dl, li, ol, p, span, tr, th, td {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	letter-spacing: inherit;
+	/*text-align: inherit;*/
+	border: 0;
+}
+
+a {
+	transition: all 0.25s ease-in-out;
+}
+
+a:hover, a:focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+/* -------------------------------------------------- */
+/* HEADER
+/* -------------------------------------------------- */	
+
+h1, .h1 {
+	font-size: 3.5em;
+}
+
+h2, .h2 {
+	font-size: 3em;
+}
+
+h3, .h3 {
+	font-size: 2.5em;
+}
+
+h4, .h4 {
+	font-size: 2em;
+}
+
+h5, .h5 {
+	font-size: 1.5em;
+}
+
+h6, .h6 {
+	font-size: 1em;
+}
+
+/* -------------------------------------------------- */
+/* PARAGRAPHS
+/* -------------------------------------------------- */
+
+p {
+    margin-bottom: 0;
+	color: inherit;
+	font-size: 1.25em;
+	line-height: 2em;
+}
+
+.p1 {
+	font-size: 2.125em;
+}
+
+.p2 {
+	font-size: 2em;
+}
+
+.p3 {
+	font-size: 1.875em;
+}
+
+.p4 {
+	font-size: 1.75em;
+}
+
+.p5 {
+	font-size: 1.625em;
+}
+
+.p6 {
+	font-size: 1.5em;
+}
+
+.p7 {
+	font-size: 1.375em;
+}
+
+.p8 {
+	font-size: 1.25em;
+}
+
+.p9 {
+	font-size: 1.125em;
+}
+
+.p10 {
+	font-size: 1em;
+}
+
+.p11 {
+	font-size: 0.875em;
+}
+
+.p12 {
+	font-size: 0.75em;
+}
+
+.p13 {
+	font-size: 0.625em;
+}
+
+.p14 {
+	font-size: 0.5em;
+}
+
+.p15 {
+	font-size: 0.375em;
+}
+
+/* -------------------------------------------------- */
+/* LISTS
+/* -------------------------------------------------- */	
+
+li {
+	color: inherit;
+	font-size: 1em;
+}
+
+/* -------------------------------------------------- */
+/* BLOCKQUOTE
+/* -------------------------------------------------- */	
+
+blockquote {
+	position: relative;
+	border-left: 1px solid #fff;
+}
+
+blockquote::after {
+	content: '\f10d';
+	z-index: -1;
+	opacity: 0.15;
+	position: absolute;
+	top: -0.35em;
+	left: 0.15em;
+    color: #eee;
+	font-size: 8em;
+    font-family: "FontAwesome";
+}
+
+/* -------------------------------------------------- */
+/* HEADER STYLES
+/* -------------------------------------------------- */	
+
+/* COMMON */
+.header-accent-left,
+.header-accent-right,
+.header-accent-center {
+	letter-spacing: 0.2em;
+}
+
+.header-accent-left::after,
+.header-accent-right::after,
+.header-accent-center::after {
+	content: "";
+	display: block;
+	margin-top: 0.75rem;
+	margin-bottom: 2rem;
+	width: 35px;
+	height: 4px;
+	background-color: #333;
+}
+
+.header-accent-left::after {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.header-accent-right::after {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.header-accent-center::after {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* STYLES */
+.header-accent-width-quarter::after {
+	width: 25%;
+}
+
+.header-accent-width-half::after {
+	width: 50%;
+}
+
+.header-accent-width-three-quarters::after {
+	width: 75%;
+}
+
+.header-accent-width-full::after {
+	width: 100%;
+}
+
+/* RESPONSIVE */
+@media only screen and (min-width: 0) and (max-width: 400px) {
+
+	.header-accent-left,
+	.header-accent-right,
+	.header-accent-center {
+		letter-spacing: 0;
+	}	
+	
+}
